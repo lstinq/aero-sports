@@ -1,7 +1,7 @@
 {
-    "name": "play-list-project",
+    "name": "aero-sports",
     "version": "0.0.0",
-    "description": "Webcomponent play-list-project following hax / open-wc recommendations",
+    "description": "Webcomponent aero-sports following hax / open-wc recommendations",
     "license": "Apache-2.0",
     "author": {
       "name": "Mandy Liu"
@@ -13,11 +13,11 @@
     ],
     "repository": {
       "type": "git",
-      "url": "https://github.com/Mandy Liu/play-list-project"
+      "url": "https://github.com/Mandy Liu/aero-sports"
     },
     "type": "module",
-    "main": "play-list-project.js",
-    "module": "play-list-project.js",
+    "main": "aero-sports.js",
+    "module": "aero-sports.js",
     "scripts": {
       "start": "web-dev-server",
       "build": "rimraf public && rollup -c rollup.config.js && npm run analyze",
