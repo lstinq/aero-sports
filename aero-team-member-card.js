@@ -31,7 +31,7 @@ export class AeroTeamMemberCard extends DDDSuper(LitElement) {
         text-align: center;
         border-radius: 8px;
         background-color: var(--aero-white);
-        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 4px rgba(0,0,0,0.1);
       }
       .team-member-photo {
         width: 100%;
