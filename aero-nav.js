@@ -1,11 +1,5 @@
 import { LitElement, html, css } from "lit";
 import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
-import "./aero-nav.js";
-import "./aero-hero.js";
-import "./aero-info-card.js";
-import "./aero-slideshow.js";
-import "./aero-stats-bar.js";
-import "./aero-footer.js";
 
 export class AeroNav extends DDDSuper(LitElement) {
     static get tag() {
@@ -33,19 +27,12 @@ export class AeroNav extends DDDSuper(LitElement) {
         display: block;
         overflow-x: hidden;
         font-family: var(--ddd-font-navigation);
-        color-scheme: light dark;
-        --aero-molten-lava: #7A0000;
-        --aero-white: #FFFFFF;
-        --aero-deep-space-blue: #00283D;
-        --aero-sky-reflection: #7FACC7;
-        --aero-black: #000000;
-        --aero-mahogany-red: #BC101C;
     }
     .navigation-bar {
         position: sticky;
         top: 0;
         z-index: 100;
-        background-color: var(--aero-white);
+        background-color: light-dark(var(--aero-white) var(--aero-black));
         width: 100%;
         flex-wrap: wrap;
     }
@@ -68,23 +55,24 @@ export class AeroNav extends DDDSuper(LitElement) {
         justify-content: right;
         margin-right: 20px;
         flex-wrap: wrap;
+        gap: 10px;
     }
     .navigation-link {
         font-family: var(--ddd-font-navigation);
         font-size: var(--ddd-font-size-s);
         font-weight: var(--ddd-font-weight-bold);
-        color: var(--aero-black);
+        color: light-dark(var(--aero-black) var(--aero-white));
         cursor: pointer;
         background: none;
         border: none;
         transition: color 0.2s;
     }
     .navigation-link:hover {
-        color: var(--aero-deep-space-blue);
-    }
+        color: var(--aero-sky-reflection);
+        }
     .navigation-link.active {
         color: var(--aero-sky-reflection);
-        background-color: #F5F5F5;
+        background-color: var(--aero-white-smoke);
         border-radius: 8px;
     }
     .navigation-auth {

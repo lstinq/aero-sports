@@ -37,8 +37,6 @@ export class AeroSlideshow extends DDDSuper(LitElement) {
         width: 100%;
         height: 100%;
         position: relative;
-        --aero-white: #FFFFFF;
-        --aero-deep-space-blue: #00283D;
     }
       .slideshow-arrow {
         position: absolute;

@@ -16,8 +16,6 @@ export class AeroStatsBar extends DDDSuper(LitElement) {
         width: 100%;
         height: 100%;
         position: relative;
-        --aero-white: #FFFFFF;
-        --aero-deep-space-blue: #00283D;
       }
       .stats-section {
         width: 100%;
@@ -42,8 +40,7 @@ export class AeroStatsBar extends DDDSuper(LitElement) {
       }
       .stats-label {
         font-size: var(--ddd-font-size-s);
-        font-weight: var(--ddd-font-weight-light);
-    }
+      }
     `];
     }
 

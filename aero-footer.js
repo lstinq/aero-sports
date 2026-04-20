@@ -16,15 +16,12 @@ export class AeroFooter extends DDDSuper(LitElement) {
         width: 100%;
         height: 100%;
         position: relative;
-        --aero-white: #FFFFFF;
-        --aero-deep-space-blue: #00283D;
-        --aero-black: #000000;
       }
       .footer {
         width: 100%;
         height: 88px;
         box-sizing: border-box;
-        background-color: var(--aero-white);
+        background-color: light-dark(var(--aero-white) var(--aero-black));
         display: flex;
         align-items: center;
         gap: 16px;
@@ -34,12 +31,12 @@ export class AeroFooter extends DDDSuper(LitElement) {
       .social-link {
         display: flex;
         padding: 2px;
-        color: var(--aero-black);
+        color: light-dark(var(--aero-black) var(--aero-white));
         font-size: var(--ddd-font-size-s);
         transition: background-color 0.2s;
     }
       .social-link:hover {
-        background-color: #F5F5F5;
+        color: var(--aero-sky-reflection);
     }
     `];
     }
