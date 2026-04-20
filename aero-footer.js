@@ -1,0 +1,60 @@
+import { LitElement, html, css } from "lit";
+import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
+
+export class AeroFooter extends DDDSuper(LitElement) {
+    static get tag() {
+        return "aero-footer";
+    }
+
+    static get styles() {
+        return [super.styles, css`
+        :host {
+        display: block;
+        overflow-x: hidden;
+        font-family: var(--ddd-font-navigation);
+        color-scheme: light dark;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        --aero-white: #FFFFFF;
+        --aero-deep-space-blue: #00283D;
+        --aero-black: #000000;
+      }
+      .footer {
+        width: 100%;
+        height: 88px;
+        box-sizing: border-box;
+        background-color: var(--aero-white);
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 0 20px;
+        flex-wrap: wrap;
+      }
+      .social-link {
+        display: flex;
+        padding: 2px;
+        color: var(--aero-black);
+        font-size: var(--ddd-font-size-s);
+        transition: background-color 0.2s;
+    }
+      .social-link:hover {
+        background-color: #F5F5F5;
+    }
+    `];
+    }
+
+    render() {
+        return html`
+      <footer class="footer">
+        <span style="flex: 1; font-size: var(--ddd-font-size-s);">&copy; 2026 Aero Sports. All rights reserved.</span>
+        <a class="social-link" href="https://x.com" target="_blank">X</a>
+        <a class="social-link" href="https://www.instagram.com" target="_blank">Instagram</a>
+        <a class="social-link" href="https://www.facebook.com" target="_blank">Facebook</a>
+        <a class="social-link" href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+      </footer>
+    `;
+    }
+}
+
+globalThis.customElements.define(AeroFooter.tag, AeroFooter);
