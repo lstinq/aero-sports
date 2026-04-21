@@ -32,6 +32,11 @@ export class AeroTeamMemberCard extends DDDSuper(LitElement) {
         border-radius: 8px;
         background-color: var(--aero-white);
         box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      .team-member-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 4px rgba(0,0,0,0.25);
       }
       .team-member-photo {
         width: 100%;

@@ -63,16 +63,18 @@ export class AeroSlideshow extends DDDSuper(LitElement) {
         top: 50%;
         transform: translateY(-50%);
         font-family: var(--ddd-font-navigation);
+        font-size: var(--ddd-font-size-s);
     }
       .next {
         right: var(--ddd-spacing-4);
         top: 50%;
         transform: translateY(-50%);
         font-family: var(--ddd-font-navigation);
+        font-size: var(--ddd-font-size-s);
     }
       .slideshow-image {
         width: 100%;
-        height: 100%;
+        max-height: 516px;
         object-fit: cover;
         border-radius: 8px;
     }

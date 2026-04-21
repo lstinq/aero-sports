@@ -18,14 +18,14 @@ export class AeroTeamPage extends DDDSuper(LitElement) {
     constructor() {
         super();
         this.teamMembers = [
-            { position: "President", name: "First Last", image: "./assets/team-member-profile-pic.jpg" },
-            { position: "Vice President", name: "First Last", image: "./assets/team-member-profile-pic.jpg" },
-            { position: "Treasurer", name: "First Last", image: "./assets/team-member-profile-pic.jpg" },
-            { position: "Secretary", name: "First Last", image: "./assets/team-member-profile-pic.jpg" },
-            { position: "Athletic Director", name: "First Last", image: "./assets/team-member-profile-pic.jpg" },
-            { position: "Coaching Coordinator", name: "First Last", image: "./assets/team-member-profile-pic.jpg" },
-            { position: "External Relations", name: "First Last", image: "./assets/team-member-profile-pic.jpg" },
-            { position: "Marketing Director", name: "First Last", image: "./assets/team-member-profile-pic.jpg" },
+            { position: "President", name: "Grizzly Bear", image: "./assets/aero-bear-1.jpg" },
+            { position: "Vice President", name: "Black Bear", image: "./assets/aero-bear-2.jpg" },
+            { position: "Treasurer", name: "Polar Bear", image: "./assets/aero-bear-3.jpg" },
+            { position: "Secretary", name: "Honey Bear", image: "./assets/aero-bear-4.jpg" },
+            { position: "Athletic Director", name: "Panda Bear", image: "./assets/aero-bear-5.jpg" },
+            { position: "Coaching Coordinator", name: "Ash Bear", image: "./assets/aero-bear-6.jpg" },
+            { position: "External Relations", name: "Brown Bear", image: "./assets/aero-bear-7.jpg" },
+            { position: "Marketing Director", name: "Sun Bear", image: "./assets/aero-bear-8.jpg" },
         ];
     }
 

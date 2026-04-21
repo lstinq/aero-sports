@@ -20,11 +20,11 @@ export class AeroAboutPage extends DDDSuper(LitElement) {
     constructor() {
         super();
         this.slideshowImages = [
-            "./assets/slideshow-1.jpg",
-            "./assets/slideshow-2.jpg",
-            "./assets/slideshow-3.jpg",
-            "./assets/slideshow-4.jpg",
-            "./assets/slideshow-5.jpg",
+            "./assets/slideshow-1.png",
+            "./assets/slideshow-2.png",
+            "./assets/slideshow-3.png",
+            "./assets/slideshow-4.png",
+            "./assets/slideshow-5.png",
         ];
     }
 
@@ -94,22 +94,22 @@ export class AeroAboutPage extends DDDSuper(LitElement) {
           <div class="about-title">About Aero</div>
           <div class="about-sub-title">Our Mission</div>
           <p class="about-body">
-            At Aero, we are dedicated to empowering youth athletes through elite training, competitive opportunities, and a culture of growth.
-            Through teamwork, discipline, and passion, we strive to create an environment where young athletes can succeed on and off the field.
+            At Aero, we are dedicated to empowering bear athletes through elite training, competitive opportunities, and a grizzly culture of growth.
+            Through teamwork, discipline, and passion, we strive to create an environment where young cubs can succeed on and off the field.
           </p>
           <div class="about-sub-title">Who We Serve</div>
             <div class="who-we-serve-cards">
               <aero-who-we-serve-card
                 .label=${'Youth Athletes'}
-                .image=${'./assets/youth-athletes.jpg'}
+                .image=${'./assets/youth-athletes.png'}
               ></aero-who-we-serve-card>
               <aero-who-we-serve-card
                 .label=${'Parents'}
-                .image=${'./assets/parents.jpg'}
+                .image=${'./assets/parents.png'}
               ></aero-who-we-serve-card>
               <aero-who-we-serve-card
                 .label=${'Coaches'}
-                .image=${'./assets/coaches.jpg'}
+                .image=${'./assets/coaches.png'}
               ></aero-who-we-serve-card>
             </div>
         </div>

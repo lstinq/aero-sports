@@ -13,13 +13,13 @@ export class AeroHomePage extends DDDSuper(LitElement) {
         bubbles: true,
         composed: true,
     }));
-  }
+  }''
 
   static get styles() {
     return css`
       .cards-section {
         width: 100%;
-        height: 320px;
+        height: 340px;
         box-sizing: border-box;
         background-color: var(--aero-deep-space-blue);
         display: grid;
@@ -40,15 +40,15 @@ export class AeroHomePage extends DDDSuper(LitElement) {
       <section class="cards-section">
         ${[
           { title: "About Us",
-            body: "Learn more about our mission to train the next generation of athletes through teamwork, dedication, and excellence.",
+            body: "Learn more about our mission to raise the next generation of bear athletes through teamwork, dedication, and mighty grizzly spirit.",
             label: "Learn More",
             action: "about" },
           { title: "Meet Our Team",
-            body: "Get to know our board of directors who made this program possible by leading and supporting our organization.",
+            body: "Get to know the wise bears behind the board of directors who made this program possible by leading and supporting every cub toward greatness.",
             label: "View Team",
             action: "team" },
           { title: "See Upcoming Events",
-            body: "Stay up to date on tournaments, tryouts, practices, and other events happening throughout the season.",
+            body: "Stay up to date on upcoming events such as  tournaments, tryouts, training sessions, and seasonal bear gatherings hosted by Aero all across the forest.",
             label: "View Schedule",
             action: "schedule" },
         ].map(card => html`

@@ -27,7 +27,7 @@ export class AeroInfoCard extends DDDSuper(LitElement) {
     static get styles() {
         return [super.styles, css`
       .info-card {
-        height: 240px;
+        height: 260px;
         overflow: auto;
         background-color: var(--aero-white);
         border-radius: 8px;
@@ -60,7 +60,7 @@ export class AeroInfoCard extends DDDSuper(LitElement) {
         font-weight: var(--ddd-font-weight-bold);
         color: var(--aero-white);
         background-color: var(--aero-molten-lava);
-        border: 2px solid var(--aero-black);
+        border: none;
         border-radius: 20px;
         cursor: pointer;
         transition: background-color 0.2s;

@@ -69,10 +69,13 @@ export class AeroNav extends DDDSuper(LitElement) {
     }
     .navigation-link:hover {
         color: var(--aero-sky-reflection);
+        box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+        border-radius: 8px;
         }
     .navigation-link.active {
         color: var(--aero-sky-reflection);
         background-color: var(--aero-white-smoke);
+        box-shadow: 0 4px 4px rgba(0,0,0,0.1);
         border-radius: 8px;
     }
     .navigation-auth {
@@ -83,8 +86,8 @@ export class AeroNav extends DDDSuper(LitElement) {
         font-family: var(--ddd-font-navigation);
         font-size: var(--ddd-font-size-s);
         font-weight: var(--ddd-font-weight-bold);
-        border: 2px solid var(--aero-black);
-        border-radius: 8px;
+        border: none;
+        border-radius: 12px;
         background: var(--aero-sky-reflection);
         cursor: pointer;
         margin-right: 12px;
@@ -100,8 +103,8 @@ export class AeroNav extends DDDSuper(LitElement) {
         font-size: var(--ddd-font-size-s);
         font-weight: var(--ddd-font-weight-bold);
         color: var(--aero-white);
-        border: 2px solid var(--aero-black);
-        border-radius: 8px;
+        border: none;
+        border-radius: 12px;
         background: var(--aero-molten-lava);
         cursor: pointer;
         transition: background-color 0.2s, color 0.2s;
@@ -133,8 +136,8 @@ export class AeroNav extends DDDSuper(LitElement) {
           </div>
 
           <div class="navigation-auth">
-            <button class="button-sign-in">SIGN IN</button>
-            <button class="button-register">REGISTER</button>
+            <button class="button-sign-in" @click=${() => window.open('https://hax.psu.edu', '_blank')}>SIGN IN</button>
+            <button class="button-register" @click=${() => window.open('https://hax.psu.edu', '_blank')}>REGISTER</button>
           </div>
         </div>
       </nav>

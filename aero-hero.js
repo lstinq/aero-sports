@@ -12,7 +12,7 @@ export class AeroHero extends DDDSuper(LitElement) {
         position: relative;
         width: 100%;
         height: 380px;
-        background-image: url('https://www.nzherald.co.nz/resizer/gwu7zjXqCuwEW2kI_4czQAMeSk0=/arc-anglerfish-syd-prod-nzme/public/2T56BFQ5GR2MRRO4PE62ZFPFVQ.png');
+        background-image: url('/assets/aero-hero-image.png');
         background-size: cover;
         background-position: center;
         display: flex;
@@ -34,10 +34,11 @@ export class AeroHero extends DDDSuper(LitElement) {
     .hero-logo {
         width: 100%;
         height: 130px;
-        scale: 1.75;
+        scale: 3;
         object-fit: cover;
         object-position: center;
         margin-top: 40px;
+        margin-bottom: 20px;
     }
     .hero-subtitle {
         font-size: var(--ddd-font-size-s);
@@ -51,8 +52,8 @@ export class AeroHero extends DDDSuper(LitElement) {
         return html`
       <section class="hero">
         <div class="hero-content">
-          <img class="hero-logo" src="./assets/aero-white-logo.png" alt="Aero logo" />
-          <div class="hero-subtitle">Where Youth Performance Takes Flight
+          <img class="hero-logo" src="./assets/aero-hero-logo.png" alt="Aero logo" />
+          <div class="hero-subtitle">Rise Above the Wild
           </div>
         </div>
       </section>

@@ -45,10 +45,10 @@ export class AeroFooter extends DDDSuper(LitElement) {
         return html`
       <footer class="footer">
         <span style="flex: 1; font-size: var(--ddd-font-size-s);">&copy; 2026 Aero Sports. All rights reserved.</span>
-        <a class="social-link" href="https://x.com" target="_blank">X</a>
-        <a class="social-link" href="https://www.instagram.com" target="_blank">Instagram</a>
-        <a class="social-link" href="https://www.facebook.com" target="_blank">Facebook</a>
-        <a class="social-link" href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+        <a class="social-link" href="https://hax.psu.edu/" target="_blank">X</a>
+        <a class="social-link" href="https://hax.psu.edu/" target="_blank">Instagram</a>
+        <a class="social-link" href="https://hax.psu.edu/" target="_blank">Facebook</a>
+        <a class="social-link" href="https://hax.psu.edu/" target="_blank">LinkedIn</a>
       </footer>
     `;
     }
