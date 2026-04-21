@@ -27,16 +27,16 @@ export class AeroInfoCard extends DDDSuper(LitElement) {
     static get styles() {
         return [super.styles, css`
       .info-card {
-        height: 260px;
-        overflow: hidden;
+        height: 240px;
+        overflow: auto;
         background-color: var(--aero-white);
         border-radius: 8px;
         padding: var(--ddd-spacing-4);
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
         text-align: center;
+        justify-content: center;
       }
       .info-card-title {
         font-size: var(--ddd-font-size-m);

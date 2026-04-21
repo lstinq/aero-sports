@@ -126,10 +126,7 @@ export class AeroSports extends DDDSuper(I18NMixin(LitElement)) {
   render() {
     return html`
       <!-- Navigation -->
-      <aero-nav
-      .activePage="${this.activePage}"
-      @page-change="${e => this._setActive(e.detail.page)}">
-      </aero-nav>
+      <aero-nav .activePage="${this.activePage}" @page-change="${e => this._setActive(e.detail.page)}"></aero-nav>
 
       <!-- Home Page Content -->
       ${this.activePage === "home" ? this._renderHomePage() : ""}

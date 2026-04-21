@@ -19,7 +19,7 @@ export class AeroHomePage extends DDDSuper(LitElement) {
     return css`
       .cards-section {
         width: 100%;
-        height: 350px;
+        height: 320px;
         box-sizing: border-box;
         background-color: var(--aero-deep-space-blue);
         display: grid;
@@ -29,7 +29,6 @@ export class AeroHomePage extends DDDSuper(LitElement) {
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
-        overflow: hidden;
       }
     `;
   }
@@ -41,7 +40,7 @@ export class AeroHomePage extends DDDSuper(LitElement) {
       <section class="cards-section">
         ${[
           { title: "About Us",
-            body: "Learn more about our mission to train the next generation of athletes through teamwork, dedication, and competitive excellence.",
+            body: "Learn more about our mission to train the next generation of athletes through teamwork, dedication, and excellence.",
             label: "Learn More",
             action: "about" },
           { title: "Meet Our Team",
