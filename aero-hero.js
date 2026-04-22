@@ -33,12 +33,12 @@ export class AeroHero extends DDDSuper(LitElement) {
     }
     .hero-logo {
         width: 100%;
-        height: 130px;
+        height: 80px;
         scale: 3;
         object-fit: cover;
         object-position: center;
         margin-top: 40px;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
     }
     .hero-subtitle {
         font-size: var(--ddd-font-size-s);

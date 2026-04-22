@@ -19,11 +19,13 @@ export class AeroFooter extends DDDSuper(LitElement) {
       }
       .footer {
         width: 100%;
-        height: 88px;
+        height: auto;
         box-sizing: border-box;
         background-color: light-dark(var(--aero-white) var(--aero-black));
         display: flex;
         align-items: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
         gap: 16px;
         padding: 0 20px;
         flex-wrap: wrap;

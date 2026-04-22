@@ -57,7 +57,6 @@ export class AeroAboutPage extends DDDSuper(LitElement) {
         align-items: stretch;
         justify-content: center;
         border-radius: 8px;
-        overflow: hidden;
         align-self: stretch;
       }
       .about-title {

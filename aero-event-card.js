@@ -41,7 +41,7 @@ export class AeroEventCard extends DDDSuper(LitElement) {
         display: block;
       }
       .event-card {
-        background: var(--aero-white);
+        background: light-dark(var(--aero-white), var(--aero-charcoal));
         border-radius: 12px;
         padding: 20px;
         box-shadow: 0 4px 4px rgba(0,0,0,0.1);
@@ -66,7 +66,7 @@ export class AeroEventCard extends DDDSuper(LitElement) {
       .event-title {
         font-size: var(--ddd-font-size-m);
         font-weight: var(--ddd-font-weight-bold);
-        color: var(--aero-black);
+        color: light-dark(var(--aero-black), var(--aero-white));
       }
       .event-detail {
         display: flex;

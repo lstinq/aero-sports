@@ -118,6 +118,7 @@ export class AeroSports extends DDDSuper(I18NMixin(LitElement)) {
         --aero-black: #000000;
         --aero-white-smoke: #F5F5F5;
         --aero-gray: #808080;
+        --aero-charcoal: #303030;
       }
       `];
   }

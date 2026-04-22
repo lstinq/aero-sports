@@ -31,13 +31,19 @@ export class AeroSlideshow extends DDDSuper(LitElement) {
         return [super.styles, css`
       :host {
         display: block;
-        overflow-x: hidden;
         font-family: var(--ddd-font-navigation);
         color-scheme: light dark;
         width: 100%;
-        height: 100%;
+        height: auto;
+      }
+      .slideshow-container {
         position: relative;
-    }
+        width: 100%;
+        height: auto;
+        line-height: 0;
+        border-radius: 8px;
+        overflow: hidden;
+      }
       .slideshow-arrow {
         position: absolute;
         background-color: var(--aero-deep-space-blue);
@@ -76,6 +82,7 @@ export class AeroSlideshow extends DDDSuper(LitElement) {
         width: 100%;
         max-height: 516px;
         object-fit: cover;
+        display: block;
         border-radius: 8px;
     }
     `];
@@ -83,9 +90,11 @@ export class AeroSlideshow extends DDDSuper(LitElement) {
 
     render() {
         return html`
-      <button class="slideshow-arrow prev" @click=${this._prev}>&#8592;</button>
-      <img class="slideshow-image" src="${this.images[this.index]}" alt="Slideshow image" />
-      <button class="slideshow-arrow next" @click=${this._next}>&#8594;</button>
+        <div class="slideshow-container">
+          <button class="slideshow-arrow prev" @click=${this._prev}>&#8592;</button>
+          <img class="slideshow-image" src="${this.images[this.index]}" alt="Slideshow image" />
+          <button class="slideshow-arrow next" @click=${this._next}>&#8594;</button>
+        </div>
     `;
     }
 }

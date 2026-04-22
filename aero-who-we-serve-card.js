@@ -33,6 +33,12 @@ export class AeroWhoWeServeCard extends DDDSuper(LitElement) {
         border-radius: 8px;
         overflow: hidden;
         cursor: pointer;
+        box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      .who-we-serve-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 4px rgba(0,0,0,0.25);
       }
       .who-we-serve-image {
         width: 100%;

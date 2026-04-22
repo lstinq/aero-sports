@@ -19,7 +19,7 @@ export class AeroHomePage extends DDDSuper(LitElement) {
     return css`
       .cards-section {
         width: 100%;
-        height: 340px;
+        height: auto;
         box-sizing: border-box;
         background-color: var(--aero-deep-space-blue);
         display: grid;

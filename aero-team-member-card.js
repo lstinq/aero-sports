@@ -30,7 +30,7 @@ export class AeroTeamMemberCard extends DDDSuper(LitElement) {
         align-items: center;
         text-align: center;
         border-radius: 8px;
-        background-color: var(--aero-white);
+        background-color: light-dark(var(--aero-white-smoke), var(--aero-charcoal));
         box-shadow: 0 4px 4px rgba(0,0,0,0.1);
         transition: transform 0.2s, box-shadow 0.2s;
       }
@@ -54,7 +54,7 @@ export class AeroTeamMemberCard extends DDDSuper(LitElement) {
       .team-member-position {
         font-size: var(--ddd-font-size-s);
         font-weight: var(--ddd-font-weight-bold);
-        color: var(--aero-black);
+        color: light-dark(var(--aero-black), var(--aero-white));
       }
       .team-member-name {
         font-size: var(--ddd-font-size-s);

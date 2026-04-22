@@ -29,7 +29,7 @@ export class AeroInfoCard extends DDDSuper(LitElement) {
       .info-card {
         height: 260px;
         overflow: auto;
-        background-color: var(--aero-white);
+        background-color: light-dark(var(--aero-white), var(--aero-black));
         border-radius: 8px;
         padding: var(--ddd-spacing-4);
         display: flex;
@@ -41,7 +41,7 @@ export class AeroInfoCard extends DDDSuper(LitElement) {
       .info-card-title {
         font-size: var(--ddd-font-size-m);
         font-weight: var(--ddd-font-weight-bold);
-        color: var(--aero-black);
+        color: light-dark(var(--aero-black), var(--aero-white));
         margin-top: 24px;
       }
       .info-card-body {

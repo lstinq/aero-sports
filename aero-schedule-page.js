@@ -19,26 +19,26 @@ export class AeroSchedulePage extends DDDSuper(LitElement) {
     super();
     this.activeFilter = "All";
     this.events = [
-      { title: "Spring Tournament", date: "2026-05-01", location: "Location Name", type: "Tournament" },
-      { title: "Summer Tryouts", date: "2026-05-15", location: "Location Name", type: "Tryout" },
-      { title: "Summer Practice", date: "2026-06-01", location: "Location Name", type: "Practice" },
-      { title: "Summer Practice", date: "2026-06-08", location: "Location Name", type: "Practice" },
-      { title: "Summer Practice", date: "2026-06-15", location: "Location Name", type: "Practice" },
-      { title: "Summer Practice", date: "2026-06-22", location: "Location Name", type: "Practice" },
-      { title: "Team Bonding Day", date: "2026-07-15", location: "Location Name", type: "Other" },
-      { title: "Fall Tryouts", date: "2026-08-10", location: "Location Name", type: "Tryout" },
-      { title: "Preseason Practice", date: "2026-08-17", location: "Location Name", type: "Practice" },
-      { title: "Preseason Practice", date: "2026-08-24", location: "Location Name", type: "Practice" },
-      { title: "Preseason Practice", date: "2026-08-31", location: "Location Name", type: "Practice" },
-      { title: "Preseason Practice", date: "2026-09-07", location: "Location Name", type: "Practice" },
-      { title: "Fall Tournament", date: "2026-09-15", location: "Location Name", type: "Tournament" },
-      { title: "Fall Practice", date: "2026-09-29", location: "Location Name", type: "Practice" },
-      { title: "Fall Practice", date: "2026-10-07", location: "Location Name", type: "Practice" },
-      { title: "Regionals", date: "2026-10-15", location: "Location Name", type: "Tournament" },
-      { title: "Fall Practice", date: "2026-10-22", location: "Location Namelds", type: "Practice" },
-      { title: "Fall Practice", date: "2026-10-29", location: "Location Name", type: "Practice" },
-      { title: "Championship Finals", date: "2026-11-10", location: "Location Name", type: "Tournament" },
-      { title: "End of Season Banquet", date: "2026-11-15", location: "Location Name", type: "Other" },
+      { title: "Spring Tournament", date: "2026-05-01", location: "Bearhaven Stadium", type: "Tournament" },
+      { title: "Summer Tryouts", date: "2026-05-15", location: "Clawmark Field", type: "Tryout" },
+      { title: "Summer Practice", date: "2026-06-01", location: "Cub Training Grounds", type: "Practice" },
+      { title: "Summer Practice", date: "2026-06-08", location: "Cub Training Grounds", type: "Practice" },
+      { title: "Summer Practice", date: "2026-06-15", location: "Cub Training Grounds", type: "Practice" },
+      { title: "Summer Practice", date: "2026-06-22", location: "Cub Training Grounds", type: "Practice" },
+      { title: "Team Bonding Day", date: "2026-07-15", location: "Pine Ridge Nature Reserve", type: "Other" },
+      { title: "Fall Tryouts", date: "2026-08-10", location: "Clawmark Field", type: "Tryout" },
+      { title: "Preseason Practice", date: "2026-08-17", location: "Cub Training Grounds", type: "Practice" },
+      { title: "Preseason Practice", date: "2026-08-24", location: "Cub Training Grounds", type: "Practice" },
+      { title: "Preseason Practice", date: "2026-08-31", location: "Cub Training Grounds", type: "Practice" },
+      { title: "Preseason Practice", date: "2026-09-07", location: "Cub Training Grounds", type: "Practice" },
+      { title: "Fall Tournament", date: "2026-09-15", location: "Bearhaven Stadium", type: "Tournament" },
+      { title: "Fall Practice", date: "2026-09-29", location: "Cub Training Grounds", type: "Practice" },
+      { title: "Fall Practice", date: "2026-10-07", location: "Cub Training Grounds", type: "Practice" },
+      { title: "Regionals", date: "2026-10-15", location: "Bearhaven Stadium", type: "Tournament" },
+      { title: "Fall Practice", date: "2026-10-22", location: "Cub Training Grounds", type: "Practice" },
+      { title: "Fall Practice", date: "2026-10-29", location: "Cub Training Grounds", type: "Practice" },
+      { title: "Championship Finals", date: "2026-11-10", location: "Bearhaven Stadium", type: "Tournament" },
+      { title: "End of Season Banquet", date: "2026-11-15", location: "Golden Den Ballroom", type: "Other" },
     ];
   }
 
@@ -82,7 +82,7 @@ export class AeroSchedulePage extends DDDSuper(LitElement) {
         padding: 8px 16px;
         border-radius: 20px;
         border: 2px solid;
-        border-color: light-dark(var(--aero-black) var(--aero-white));
+        border-color: light-dark(var(--aero-black), var(--aero-white));
         background: var(--aero-white);
         font-family: var(--ddd-font-navigation);
         font-size: var(--ddd-font-size-s);
@@ -92,7 +92,7 @@ export class AeroSchedulePage extends DDDSuper(LitElement) {
         transition: background 0.2s, color 0.2s;
       }
       .filter-button:hover {
-        background: var(--aero-white-smoke);
+        background: var(--aero-gray);
         color: var(--aero-black);
       }
       .filter-button.active {
