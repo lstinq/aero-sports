@@ -20,11 +20,11 @@ export class AeroAboutPage extends DDDSuper(LitElement) {
     constructor() {
         super();
         this.slideshowImages = [
-            "./assets/slideshow-1.png",
-            "./assets/slideshow-2.png",
-            "./assets/slideshow-3.png",
-            "./assets/slideshow-4.png",
-            "./assets/slideshow-5.png",
+            "/assets/slideshow-1.png",
+            "/assets/slideshow-2.png",
+            "/assets/slideshow-3.png",
+            "/assets/slideshow-4.png",
+            "/assets/slideshow-5.png",
         ];
     }
 

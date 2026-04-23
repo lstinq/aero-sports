@@ -33,11 +33,11 @@ export class AeroSports extends DDDSuper(I18NMixin(LitElement)) {
     this.menuOpen = false;
     this.activePage = "home";
     this.slideshowImages = [
-      "./assets/slideshow-1.jpg",
-      "./assets/slideshow-2.jpg",
-      "./assets/slideshow-3.jpg",
-      "./assets/slideshow-4.jpg",
-      "./assets/slideshow-5.jpg",
+      "/assets/slideshow-1.jpg",
+      "/assets/slideshow-2.jpg",
+      "/assets/slideshow-3.jpg",
+      "/assets/slideshow-4.jpg",
+      "/assets/slideshow-5.jpg",
     ];
   }
 
