@@ -232,7 +232,7 @@ export class AeroNav extends DDDSuper(LitElement) {
         <nav class="navigation-bar">
             <div class="navigation-inner">
                 <div class="navigation-logo">
-                    <img src="./assets/aero-logo.png" alt="Aero logo" height="80"/>
+                    <img src="/assets/aero-logo.png" alt="Aero logo" height="80"/>
                 </div>
                 <div class="navigation-links">
                 ${["home", "about", "team", "schedule"].map(page => html`
