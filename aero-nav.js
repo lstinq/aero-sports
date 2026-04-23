@@ -242,8 +242,7 @@ export class AeroNav extends DDDSuper(LitElement) {
                     <button
                     class="navigation-link
                     ${this.activePage === page ? "active" : ""}
-                    ${this._openMenu === page ? "menu-open" : ""}"
-                    @click="${() => this._setActive(page)}">
+                    ${this._openMenu === page ? "menu-open" : ""}">
                     ${page.toUpperCase()}
                     <span class="chevron ${this._openMenu === page ? "open" : ""}">&#8964;</span>
                     </button>

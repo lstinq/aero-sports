@@ -28,9 +28,9 @@ export class AeroEventCard extends DDDSuper(LitElement) {
     _typeColor(type) {
         const map = {
             "Tournament": "var(--aero-molten-lava)",
-            "Tryout": "var(--aero-deep-space-blue",
-            "Practice": "var(--aero-sky-reflection",
-            "Other": "var(--aero-mahogany-red",
+            "Tryout": "var(--aero-deep-space-blue)",
+            "Practice": "var(--aero-sky-reflection)",
+            "Other": "var(--aero-mahogany-red)",
         };
         return map[type];
     }
