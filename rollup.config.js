@@ -49,5 +49,10 @@ export default {
         ],
       ],
     }),
+    copy({
+      targets: [
+        { src: 'assets/*', dest: 'public/assets' }
+      ]
+    }),
   ],
 };
