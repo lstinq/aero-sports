@@ -21,19 +21,19 @@ export class AeroFooter extends DDDSuper(LitElement) {
         width: 100%;
         height: auto;
         box-sizing: border-box;
-        background-color: light-dark(var(--aero-white) var(--aero-black));
+        background-color: light-dark(var(--aero-white), var(--aero-black));
         display: flex;
         align-items: center;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        gap: 16px;
-        padding: 0 20px;
+        margin-top: var(--ddd-spacing-5);
+        margin-bottom: var(--ddd-spacing-5);
+        gap: var(--ddd-spacing-4);
+        padding: 0 var(--ddd-spacing-5);
         flex-wrap: wrap;
       }
       .social-link {
         display: flex;
-        padding: 2px;
-        color: light-dark(var(--aero-black) var(--aero-white));
+        padding: var(--ddd-spacing-1);
+        color: light-dark(var(--aero-black), var(--aero-white));
         font-size: var(--ddd-font-size-s);
         transition: background-color 0.2s;
     }

@@ -43,20 +43,20 @@ export class AeroAboutPage extends DDDSuper(LitElement) {
       .about-page {
         padding: var(--ddd-spacing-4) var(--ddd-spacing-5);
         display: flex;
-        gap: 40px;
+        gap: var(--ddd-spacing-10);
         align-items: flex-start;
         box-sizing: border-box;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
       }
       .about-left {
-        flex: 1 1 50%;
+        flex: 1 1 calc(50% - 20px);
       }
       .about-right {
-        flex: 1 1 50%;
+        flex: 1 1 calc(50% - 20px);
         display: flex;
         align-items: stretch;
         justify-content: center;
-        border-radius: 8px;
+        border-radius: var(--ddd-radius-sm);
         align-self: stretch;
       }
       .about-title {
@@ -68,19 +68,30 @@ export class AeroAboutPage extends DDDSuper(LitElement) {
       .about-sub-title {
         font-size: var(--ddd-font-size-m);
         font-weight: var(--ddd-font-weight-bold);
-        color: light-dark(var(--aero-black) var(--aero-white));
-        margin-top: 24px;
+        color: light-dark(var(--aero-black), var(--aero-white));
+        margin-top: var(--ddd-spacing-6);
       }
       .about-body {
         font-size: var(--ddd-font-size-s);
         color: var(--aero-gray);
-        margin-top: 12px;
+        margin-top: var(--ddd-spacing-4);
       }
       .who-we-serve-cards {
-        margin-top: 12px;
+        margin-top: var(--ddd-spacing-4);
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
+        gap: var(--ddd-spacing-5);
+      }
+      @media (max-width: 480px) {
+        .about-left {
+          flex: 1 1 100%;
+        }
+        .about-right {
+          flex: 1 1 100%;
+        }
+        .who-we-serve-cards {
+          grid-template-columns: 1fr;
+        }
       }
      `];
     }

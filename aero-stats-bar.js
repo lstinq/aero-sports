@@ -24,8 +24,8 @@ export class AeroStatsBar extends DDDSuper(LitElement) {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        padding: 32px 40px;
-        margin-top: 12px;
+        padding: var(--ddd-spacing-8) var(--ddd-spacing-10);
+        margin-top: var(--ddd-spacing-3);
         flex-wrap: wrap;
       }
       .stats-item {

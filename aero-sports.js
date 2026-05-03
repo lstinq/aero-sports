@@ -43,9 +43,22 @@ export class AeroSports extends DDDSuper(I18NMixin(LitElement)) {
 
   connectedCallback() {
     super.connectedCallback();
+    this._syncPageFromURL();
+    this._boundPopState = () => this._syncPageFromURL();
+    window.addEventListener('popstate', this._boundPopState);
     this.addEventListener('page-change', (e) => {
       this._setActive(e.detail.page);
     });
+  }
+
+  disconnectedCallback() {
+    super.disconnectedCallback();
+    window.removeEventListener('popstate', this._boundPopState);
+  }
+
+  _syncPageFromURL() {
+    const path = window.location.pathname.replace('/', '') || 'home';
+    this.activePage = path;
   }
 
   static get properties() {
@@ -59,6 +72,8 @@ export class AeroSports extends DDDSuper(I18NMixin(LitElement)) {
   _setActive(page) {
     this.activePage = page;
     this.menuOpen = false;
+    const slug = page === 'home' ? '/' : '/' + page;
+    history.pushState({}, '', slug);
   }
 
   _onCardAction(action) {

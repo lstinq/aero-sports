@@ -13,7 +13,7 @@ export class AeroHomePage extends DDDSuper(LitElement) {
         bubbles: true,
         composed: true,
     }));
-  }''
+  }
 
   static get styles() {
     return css`
@@ -24,11 +24,21 @@ export class AeroHomePage extends DDDSuper(LitElement) {
         background-color: var(--aero-deep-space-blue);
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-        padding: 20px;
-        align-items: center;
+        gap: var(--ddd-spacing-5);
+        padding: var(--ddd-spacing-5) var(--ddd-spacing-5) var(--ddd-spacing-15) var(--ddd-spacing-5);
+        align-items: stretch;
         justify-content: center;
         flex-wrap: wrap;
+      }
+      @media (max-width: 700px) {
+        .cards-section {
+          grid-template-columns: 1fr;
+          gap: var(--ddd-spacing-13);
+          padding: var(--ddd-spacing-6) var(--ddd-spacing-6) var(--ddd-spacing-12) var(--ddd-spacing-6);
+        }
+        .cards-section aero-info-card {
+          width: 100%;
+        }
       }
     `;
   }

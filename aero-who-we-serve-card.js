@@ -30,7 +30,7 @@ export class AeroWhoWeServeCard extends DDDSuper(LitElement) {
         position: relative;
         flex: 1;
         height: 200px;
-        border-radius: 8px;
+        border-radius: var(--ddd-radius-sm);
         overflow: hidden;
         cursor: pointer;
         box-shadow: 0 4px 4px rgba(0,0,0,0.1);

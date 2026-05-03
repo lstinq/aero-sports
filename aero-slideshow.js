@@ -41,7 +41,7 @@ export class AeroSlideshow extends DDDSuper(LitElement) {
         width: 100%;
         height: auto;
         line-height: 0;
-        border-radius: 8px;
+        border-radius: var(--ddd-radius-sm);
         overflow: hidden;
       }
       .slideshow-arrow {
@@ -83,7 +83,7 @@ export class AeroSlideshow extends DDDSuper(LitElement) {
         max-height: 516px;
         object-fit: cover;
         display: block;
-        border-radius: 8px;
+        border-radius: var(--ddd-radius-sm);
     }
     `];
     }
@@ -91,9 +91,9 @@ export class AeroSlideshow extends DDDSuper(LitElement) {
     render() {
         return html`
         <div class="slideshow-container">
-          <button class="slideshow-arrow prev" @click=${this._prev}>&#8592;</button>
-          <img class="slideshow-image" src="${this.images[this.index]}" alt="Slideshow image" />
-          <button class="slideshow-arrow next" @click=${this._next}>&#8594;</button>
+          <button class="slideshow-arrow prev" aria-label="Previous image" @click=${this._prev}>&#8592;</button>
+          <img class="slideshow-image" src="${this.images[this.index]}" alt="Slideshow image ${this.index + 1} of ${this.images.length}" />
+          <button class="slideshow-arrow next" aria-label="Next image" @click=${this._next}>&#8594;</button>
         </div>
     `;
     }

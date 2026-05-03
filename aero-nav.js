@@ -11,6 +11,7 @@ export class AeroNav extends DDDSuper(LitElement) {
             ...super.properties,
             activePage: { type: String },
             _openMenu: { type: String, state: true },
+            _menuData: { type: Array, state: true },
         };
     }
 
@@ -18,6 +19,7 @@ export class AeroNav extends DDDSuper(LitElement) {
         super();
         this._openMenu = null;
         this._closeTimeout = null;
+        this._menuData = [];
     }
 
     _setActive(page) {
@@ -26,6 +28,17 @@ export class AeroNav extends DDDSuper(LitElement) {
             bubbles: true,
             composed: true
         }));
+    }
+
+    connectedCallback() {
+        super.connectedCallback();
+        this._loadMenu();
+    }
+
+    async _loadMenu() {
+        const res = await fetch('/api/menu');
+        const data = await res.json();
+        this._menuData = data;
     }
 
     _onMenuEnter(page) {
@@ -37,28 +50,6 @@ export class AeroNav extends DDDSuper(LitElement) {
         this._closeTimeout = setTimeout(() => {
             this._openMenu = null;
         }, 120);
-    }
-
-    _dropdownItems(page) {
-        const items = {
-            home: [
-                { label: "About Us", action: "home" },
-                { label: "Meet Our Team", action: "home" },
-                { label: "See Upcoming Events", action: "home" },
-            ],
-            about: [
-                { label: "Our Mission", action: "about" },
-                { label: "Who We Serve", action: "about" },
-                { label: "By the Numbers", action: "about" },
-            ],
-            team: [
-                { label: "Board of Directors", action: "team" },
-            ],
-            schedule: [
-                { label: "Upcoming Events", action: "schedule" },
-            ],
-        };
-        return items[page] ?? [];
     }
 
     _handleDropdownClick(action) {
@@ -85,16 +76,16 @@ export class AeroNav extends DDDSuper(LitElement) {
     .navigation-logo {
         display: flex;
         align-items: baseline;
-        margin-top: 10px;
-        margin-bottom: 10px;
+        margin-top: var(--ddd-spacing-3);
+        margin-bottom: var(--ddd-spacing-3);
     }
     .navigation-links {
         display: flex;
         flex: 1;
         justify-content: right;
-        margin-right: 20px;
+        margin-right: var(--ddd-spacing-5);
         flex-wrap: wrap;
-        gap: 10px;
+        gap: var(--ddd-spacing-3);
     }
     .navigation-link {
         font-family: var(--ddd-font-navigation);
@@ -104,16 +95,16 @@ export class AeroNav extends DDDSuper(LitElement) {
         cursor: pointer;
         background: none;
         border: none;
-        transition: color 0.2s background-color 0.2s;
+        transition: color 0.2s, background-color 0.2s;
     }
     .navigation-link:hover, .navigation-link.menu-open {
         color: var(--aero-gray);
         background-color: light-dark(var(--aero-white-smoke), var(--aero-charcoal));
-        border-radius: 8px;
+        border-radius: var(--ddd-radius-sm);
     }
     .navigation-link.active {
         color: var(--aero-sky-reflection);
-        border-radius: 8px;
+        border-radius: var(--ddd-radius-sm);
     }
     .chevron {
         display: inline-block;
@@ -136,14 +127,14 @@ export class AeroNav extends DDDSuper(LitElement) {
         min-width: 200px;
         background-color: light-dark(var(--aero-white), var(--aero-black));
         border: none;
-        border-radius: 12px;
-        padding: 8px;
+        border-radius: var(--ddd-radius-sm);
+        padding: var(--ddd-spacing-2);
         box-shadow: 0 4px 8px rgba(0,0,0,0.25);
         z-index: 200;
         opacity: 0;
         pointer-events: none;
         transform: translateY(-6px);
-        transition: opacity 0.2 ease, transform 0.2 ease;
+        transition: opacity 0.2s ease, transform 0.2s ease;
     }
     .dropdown.open {
         opacity: 1;
@@ -154,14 +145,14 @@ export class AeroNav extends DDDSuper(LitElement) {
     .dropdown-item {
         display: block;
         width: 100%;
-        padding: 8px;
+        padding: var(--ddd-spacing-2);
         font-family: var(--ddd-font-navigation);
         font-size: var(--ddd-font-size-xs);
         font-weight: var(--ddd-font-weight-bold);
         color: light-dark(var(--aero-black), var(--aero-white));
         background: none;
         border: none;
-        border-radius: 8px;
+        border-radius: var(--ddd-radius-sm);
         text-align: left;
         cursor: pointer;
         transition: background-color 0.2s, color 0.2s;
@@ -175,15 +166,15 @@ export class AeroNav extends DDDSuper(LitElement) {
         display: flex;
     }
     .button-sign-in {
-        padding: 8px;
+        padding: var(--ddd-spacing-2);
         font-family: var(--ddd-font-navigation);
         font-size: var(--ddd-font-size-s);
         font-weight: var(--ddd-font-weight-bold);
         border: none;
-        border-radius: 12px;
+        border-radius: var(--ddd-radius-md);
         background: var(--aero-sky-reflection);
         cursor: pointer;
-        margin-right: 12px;
+        margin-right: var(--ddd-spacing-3);
         transition: background-color 0.2s, color 0.2s;
     }
     .button-sign-in:hover {
@@ -191,22 +182,78 @@ export class AeroNav extends DDDSuper(LitElement) {
         color: var(--aero-sky-reflection);
     }
     .button-register {
-        padding: 8px;
+        padding: var(--ddd-spacing-2);
         font-family: var(--ddd-font-navigation);
         font-size: var(--ddd-font-size-s);
         font-weight: var(--ddd-font-weight-bold);
         color: var(--aero-white);
         border: none;
-        border-radius: 12px;
+        border-radius: var(--ddd-radius-md);
         background: var(--aero-molten-lava);
         cursor: pointer;
         transition: background-color 0.2s, color 0.2s;
         flex-wrap: wrap;
-        margin-right: 20px;
+        margin-right: var(--ddd-spacing-5);
     }
     .button-register:hover {
         background-color: var(--aero-mahogany-red);
         color: var(--aero-black);
+    }
+    @media (max-width: 700px) {
+        .navigation-inner {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0 var(--ddd-spacing-3);
+        }
+        .navigation-links {
+            flex-direction: column;
+            justify-content: flex-start;
+            width: 100%;
+            margin-right: 0;
+            gap: var(--ddd-spacing-1);
+            padding-bottom: var(--ddd-spacing-3);
+        }
+        .nav-item {
+            width: 100%;
+        }
+        .navigation-link {
+            width: 100%;
+            text-align: left;
+            padding: var(--ddd-spacing-3) var(--ddd-spacing-2);
+        }
+        .navigation-auth {
+            width: 100%;
+            padding: 0 var(--ddd-spacing-3) var(--ddd-spacing-3) var(--ddd-spacing-3);
+            box-sizing: border-box;
+        }
+        .button-register {
+            margin-right: 0;
+        }
+        .dropdown {
+            position: static;
+            opacity: 1;
+            pointer-events: all;
+            transform: none;
+            box-shadow: none;
+            padding-left: var(--ddd-spacing-4);
+            min-width: unset;
+            width: 100%;
+            border-radius: 0;
+            display: none;
+        }
+        .dropdown.open {
+            display: block;
+        }
+        .navigation-auth {
+            width: 100%;
+            padding-bottom: var(--ddd-spacing-3);
+            gap: var(--ddd-spacing-2);
+        }
+        .button-sign-in, .button-register {
+            flex: 1;
+            margin-right: 0;
+            text-align: center;
+        }
     }
     `];
     }
@@ -235,27 +282,33 @@ export class AeroNav extends DDDSuper(LitElement) {
                     <img src="/assets/aero-logo.png" alt="Aero logo" height="80"/>
                 </div>
                 <div class="navigation-links">
-                ${["home", "about", "team", "schedule"].map(page => html`
-                    <div class="nav-item"
-                    @mouseenter="${() => this._onMenuEnter(page)}"
-                    @mouseleave="${this._onMenuLeave}">
-                    <button
-                    class="navigation-link
-                    ${this.activePage === page ? "active" : ""}
-                    ${this._openMenu === page ? "menu-open" : ""}">
-                    ${page.toUpperCase()}
-                    <span class="chevron ${this._openMenu === page ? "open" : ""}">&#8964;</span>
-                    </button>
-                    <div class="dropdown ${this._openMenu === page ? "open" : ""}">
-                    ${this._dropdownItems(page).map(item => this._renderDropdownItem(item))}
-                    </div>
+                    ${this._menuData.map(item => html`
+                        <div class="nav-item"
+                            @mouseenter="${() => this._onMenuEnter(item.id)}"
+                            @mouseleave="${this._onMenuLeave}">
+                            <button
+                                class="navigation-link
+                                ${this.activePage === item.id ? 'active' : ''}
+                                ${this._openMenu === item.id ? 'menu-open' : ''}"
+                                @click="${() => this._setActive(item.id)}">
+                                ${item.title.toUpperCase()}
+                                <span class="chevron ${this._openMenu === item.id ? 'open' : ''}">&#8964;</span>
+                            </button>
+                            <div class="dropdown ${this._openMenu === item.id ? 'open' : ''}">
+                                ${(item.children ?? []).map(child => html`
+                                    <button class="dropdown-item"
+                                        @click="${() => this._handleDropdownClick(item.id)}">
+                                        ${child.title}
+                                    </button>
+                                `)}
+                            </div>
+                        </div>
+                    `)}
                 </div>
-                `)}
-            </div>
-            <div class="navigation-auth">
-                <button class="button-sign-in" @click=${() => window.open('https://hax.psu.edu', '_blank')}>SIGN IN</button>
-                <button class="button-register" @click=${() => window.open('https://hax.psu.edu', '_blank')}>REGISTER</button>
-            </div>
+                <div class="navigation-auth">
+                    <button class="button-sign-in" @click=${() => window.open('https://hax.psu.edu', '_blank')}>SIGN IN</button>
+                    <button class="button-register" @click=${() => window.open('https://hax.psu.edu', '_blank')}>REGISTER</button>
+                </div>
             </div>
         </nav>
     `;

@@ -42,12 +42,12 @@ export class AeroEventCard extends DDDSuper(LitElement) {
       }
       .event-card {
         background: light-dark(var(--aero-white), var(--aero-charcoal));
-        border-radius: 12px;
-        padding: 20px;
+        border-radius: var(--ddd-radius-sm);
+        padding: var(--ddd-spacing-5);
         box-shadow: 0 4px 4px rgba(0,0,0,0.1);
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: var(--ddd-spacing-3);
         transition: transform 0.2s, box-shadow 0.2s;
       }
       .event-card:hover {
@@ -56,8 +56,8 @@ export class AeroEventCard extends DDDSuper(LitElement) {
       }
       .event-type-tag {
         display: inline-block;
-        padding: 4px 12px;
-        border-radius: 20px;
+        padding: var(--ddd-spacing-1) var(--ddd-spacing-3);
+        border-radius: var(--ddd-radius-xl);
         font-size: var(--ddd-font-size-xs);
         font-weight: var(--ddd-font-weight-bold);
         color: var(--aero-white);
@@ -71,7 +71,7 @@ export class AeroEventCard extends DDDSuper(LitElement) {
       .event-detail {
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: var(--ddd-spacing-2);
         font-size: var(--ddd-font-size-s);
         color: var(--aero-gray);
       }

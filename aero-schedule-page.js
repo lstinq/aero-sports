@@ -50,29 +50,29 @@ export class AeroSchedulePage extends DDDSuper(LitElement) {
         font-weight: var(--ddd-font-weight-bold);
         color: var(--aero-molten-lava);
         text-transform: uppercase;
-        margin-bottom: 24px;
+        margin-bottom: var(--ddd-spacing-6);
       }
       .schedule-sub-title {
         font-size: var(--ddd-font-size-m);
         font-weight: var(--ddd-font-weight-bold);
         color: light-dark(var(--aero-black), var(--aero-white));
-        margin-bottom: 12px;
+        margin-bottom: var(--ddd-spacing-3);
       }
       .schedule-body {
         font-size: var(--ddd-font-size-s);
         color: var(--aero-gray);
-        margin-bottom: 24px;
+        margin-bottom: var(--ddd-spacing-6);
       }
       .filter-bar {
         display: flex;
-        gap: 10px;
+        gap: var(--ddd-spacing-3);
         flex-wrap: wrap;
-        margin-bottom: 24px;
+        margin-bottom: var(--ddd-spacing-6);
       }
       .filter-button {
-        padding: 8px 16px;
-        border-radius: 20px;
-        border: 2px solid;
+        padding: var(--ddd-spacing-2) var(--ddd-spacing-4);
+        border-radius: var(--ddd-radius-xl);
+        border: var(--ddd-border-size-sm) solid;
         border-color: light-dark(var(--aero-black), var(--aero-white));
         background: var(--aero-white);
         font-family: var(--ddd-font-navigation);
@@ -88,12 +88,12 @@ export class AeroSchedulePage extends DDDSuper(LitElement) {
       }
       .filter-button.active {
         background: var(--aero-sky-reflection);
-        color: light-dark(var(--aero-black) var(--aero-white));
+        color: light-dark(var(--aero-black), var(--aero-white));
       }
       .events-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 20px;
+        gap: var(--ddd-spacing-5);
       }
     `];
   }

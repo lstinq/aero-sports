@@ -40,6 +40,7 @@ export class AeroTeamPage extends DDDSuper(LitElement) {
       .team-page {
         padding: var(--ddd-spacing-4) var(--ddd-spacing-5);
         box-sizing: border-box;
+        width: 100%;
       }
       .team-title {
         font-size: var(--ddd-font-size-xl);
@@ -50,14 +51,19 @@ export class AeroTeamPage extends DDDSuper(LitElement) {
       .team-sub-title {
         font-size: var(--ddd-font-size-m);
         font-weight: var(--ddd-font-weight-bold);
-        color: light-dark(var(--aero-black) var(--aero-white));
-        margin-top: 24px;
+        color: light-dark(var(--aero-black), var(--aero-white));
+        margin-top: var(--ddd-spacing-6);
       }
       .team-grid {
-        margin-top: 12px;
+        margin-top: var(--ddd-spacing-3);
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 30px;
+        gap: var(--ddd-spacing-8);
+      }
+      @media (max-width: 700px) {
+        .team-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
       }
     `];
     }
